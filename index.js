@@ -1,6 +1,3 @@
-// Naive way of maintaining state but without knowing anything about how the rest of the website is constructed it's the best I can do.
-var popupMadeAlready = false;
-
 // If you want to actually add the divs manually with JavaScript...
 
 // $("html").mousemove(function(e) {
@@ -20,6 +17,8 @@ var popupMadeAlready = false;
 
 
 (function() {
+  // Naive way of maintaining state but without knowing anything about how the rest of the website is constructed it's the best I can do.
+  var popupMadeAlready = false;
   document.querySelector('html').addEventListener('mousemove', function (e) {
   if (shouldShowPopup(e)) {
     // This could annoy them 🤣
