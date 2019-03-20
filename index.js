@@ -50,27 +50,27 @@ function shouldShowPopup(e) {
 
 function setPopup(e) {
   popupMadeAlready = true;
-  document.querySelector('.popup-custom').style.visibility = 'visible';
+  // document.querySelector('.popup-custom').style.visibility = 'visible';
   document.querySelector('.popup-innards').style.visibility = 'visible';
-  document.querySelector('.popup-custom').style.zIndex = 998;
+  // document.querySelector('.popup-custom').style.zIndex = 998;
   document.querySelector('.popup-innards').style.zIndex = 999;
-  document.querySelector('.popup-custom').addEventListener('click', destroyPopup);
+  // document.querySelector('.popup-custom').addEventListener('click', destroyPopup);
   document.querySelector('.popup-innards').addEventListener('click', destroyPopup);
 }
 
 function destroyPopup() {
-  if (document.querySelector('.popup-custom')) {
-    document.querySelector('.popup-custom').remove();
-  }
+  // if (document.querySelector('.popup-custom')) {
+    // document.querySelector('.popup-custom').remove();
+  // }
 }
 
 // Alternative to deleting, if you want them to go back to hiding.
 function hidePopup() {
-  document.querySelector('.popup-custom').style.visibility = 'hidden';
+  // document.querySelector('.popup-custom').style.visibility = 'hidden';
   document.querySelector('.popup-innards').style.visibility = 'hidden';
-  document.querySelector('.popup-custom').style.zIndex = 0;
+  // document.querySelector('.popup-custom').style.zIndex = 0;
   document.querySelector('.popup-innards').style.zIndex = 0;
-  document.querySelector('.popup-custom').removeEventListener('click', destroyPopup);
+  // document.querySelector('.popup-custom').removeEventListener('click', destroyPopup);
   document.querySelector('.popup-innards').removeEventListener('click', destroyPopup);
 }}
 

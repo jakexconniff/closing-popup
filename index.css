@@ -17,8 +17,5 @@
   display: inline-block;
   margin-top: calc(50vh - 200px);
   visibility: hidden;
-}
-
-.outer-div {
-  background-color: green;
+  background-color: red;
 }
