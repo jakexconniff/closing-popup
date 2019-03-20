@@ -16,7 +16,7 @@
 // If you're okay leaving the divs hiden with 0 z-index then this should work well.
 
 
-(function() {
+function runPopup() {
   // Naive way of maintaining state but without knowing anything about how the rest of the website is constructed it's the best I can do.
   var popupMadeAlready = false;
   document.querySelector('html').addEventListener('mousemove', function (e) {
@@ -42,6 +42,7 @@ function shouldShowPopup(e) {
   }
   // Not going to recreate an actual served web page, but if we change this to anything but index.html we can see that it doesn't work.
   // This proves the match functionality is working.
+  // REPLACE index.html WITH #Confirmed HERE!!!
   if (window.location.href.match(/index.html/g)) {
     return true;
   }
@@ -71,4 +72,6 @@ function hidePopup() {
   document.querySelector('.popup-innards').style.zIndex = 0;
   document.querySelector('.popup-custom').removeEventListener('click', destroyPopup);
   document.querySelector('.popup-innards').removeEventListener('click', destroyPopup);
-}})()
+}}
+
+runPopup();
